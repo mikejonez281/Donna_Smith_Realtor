@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donna M. Smith Realty</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom bg-light"
+      >
+        <!-- Logo and Brand Name -->
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img
+            src="logo.png"
+            width="40"
+            alt="Donna M. Smith Realty Logo"
+            class="logo-image rounded-4" 
+          />
+          <span class="fs-4 ms-2">Donna M. Smith Realty</span>
+          <!-- Added some spacing with 'ms-2' -->
+        </a>
+
+        <!-- Navigation Menu and Button wrapped together for alignment -->
+        <div class="d-flex align-items-center">
+          <!-- Navigation links -->
+          <ul class="nav nav-pills me-3">
+            <!-- Added 'me-3' to create space between the nav links and the button -->
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Listings</a></li>
+            <li class="nav-item">
+              <a href="#/services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+
+          <!-- Language switch button -->
+          <button class="btn custom-btn-primary btn-md px-3" id="language-switch">
+            Español
+          </button>
+          <!-- Reduced button size using 'btn-sm' and adjusted padding with 'px-3' -->
+        </div>
+      </header>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="home3.jpeg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div id="carousel-content" class="col-lg-6"></div>
+        <!-- <div class="col-lg-6">
+          <div
+            id="reviewCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#reviewCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#reviewCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="">Next</span>
+            </button>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+                  Review from Valverde Rentals
+                </h1>
+                <p class="lead">
+                  "Awesome Realtor, Donna is always at my service with my
+                  properties!"
+                </p>
+                <div class="stars">
+                  <script>
+                    document.write(renderStars(5));
+                  </script>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+                  Review from Rivera Services
+                </h1>
+                <p class="lead">
+                  "Did multiple projects on Donna's home listing and excellent
+                  to work with"
+                </p>
+                <div class="stars">
+                  <script>
+                    document.write(renderStars(5));
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div id="app"></div>
+        <div id="page-content"></div>
+
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>Contact</h3>
+              <p><a href="tel:+1 678-851-7170">Phone: +1 678-851-7170</a></p>
+              <p>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com"
+                  target="_blank"
+                  >Email: donnamsmithre@gmail.com</a
+                >
+              </p>
+            </div>
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <a href="#/services">Services</a>
+              <a href="#/about">About</a>
+              <a href="#/contact">Contact</a>
+            </div>
+            <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="https://www.facebook.com/donna.regeski">Facebook</a>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Donna M. Smith Realty. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("language-switch")
+        .addEventListener("click", () => {
+          state.language = state.language === "en" ? "es" : "en";
+          updateTranslations();
+          updateContent(); // Re-render carousel with new language
+        });
+    </script>
+  </body>
+</html>

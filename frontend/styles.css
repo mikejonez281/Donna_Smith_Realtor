@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: rgb(255, 255, 255); /* Neutral taupe */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(80, 80, 80);
+}
+.logo-image {
+    height: 100px; /* Adjust size as needed */
+    width: auto;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px; /* Optional: makes it look like a button */
+}
+.nav-links a, .nav-links button {
+    margin: 0 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav-links a:hover, .nav-links button:hover {
+    text-decoration: underline;
+}
+.chat-button {
+    background-color: #D4A5A5;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+#content {
+    padding: 2rem;
+}
+.footer {
+    background-color: #5e5e5e;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-section a {
+    color: #645a4c(114, 0, 0);
+    display: block;
+    margin: 0.5rem 0;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+}
+.star {
+    font-size: 24px;
+}
+.full-star { color: gold; }
+.half-star {
+    color: gold;
+    position: relative;
+}
+.half-star::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: white;
+}
+.empty-star { color: lightgray; }
+
+.custom-navlink {
+display: block;
+padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+font-size: var(--bs-nav-link-font-size);
+font-weight: var(--bs-nav-link-font-weight);
+color: var(--bs-nav-link-color);
+text-decoration: none;
+background: 0 0;
+border: 0;
+transition: color .15sease-in-out, background-color .15sease-in-out, border-color .15sease-in-out;
+}
+.custom-btn-primary {
+    --bs-btn-color: #ffc8c8;
+    --bs-btn-bg: #645a4c;
+    --bs-btn-border-color: #645a4c;
+    --bs-btn-hover-color: #ffc8c8;
+    --bs-btn-hover-bg: #151A1F;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+} 

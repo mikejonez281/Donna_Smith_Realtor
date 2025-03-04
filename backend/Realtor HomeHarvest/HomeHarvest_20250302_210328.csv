@@ -1,0 +1,6 @@
+property_url,mls,mls_id,status,style,street,unit,city,state,zip_code,beds,full_baths,half_baths,sqft,year_built,list_price,list_date,sold_price,last_sold_date,lot_sqft,price_per_sqft,latitude,longitude,stories,hoa_fee,parking_garage
+https://www.realtor.com/realestateandhomes-detail/5096808822,ASGA,10469001,FOR_RENT,SINGLE_FAMILY,586 Poplar St,,Toccoa,GA,30577,3,2,,1200,1972,1395,2025-03-01,95000,2020-03-13,15246,1,34.563372,-83.318683,1,0,
+https://www.realtor.com/realestateandhomes-detail/6324589621,REDI,-OIkiTKx7rWB0c5z8dxF$Main,FOR_RENT,SINGLE_FAMILY,580 Mize Rd,,Toccoa,GA,30577,3,2,,2026,,1500,2025-03-01,80000,2021-09-17,,1,34.55271,-83.322051,,,
+https://www.realtor.com/realestateandhomes-detail/9722464498,AVAL,61294708,FOR_RENT,TOWNHOMES,56 Fern Point Dr,Unit A,Toccoa,GA,30577,2,2,,1421,,1400,2025-02-24,,,,1,34.571139,-83.299387,,,
+https://www.realtor.com/realestateandhomes-detail/9637954039,ASGA,10442228,FOR_RENT,MULTI_FAMILY,152 Colonial Dr,,Toccoa,GA,30577,2,1,1,2176,1990,1100,2025-01-18,,,,1,34.56671,-83.295081,2,0,
+https://www.realtor.com/realestateandhomes-detail/9637954039,ATGA,7510691,FOR_RENT,DUPLEX_TRIPLEX,152 Colonial Dr,,Toccoa,GA,30577,2,1,1,2176,1990,1100,2025-01-17,,,,1,34.56671,-83.295081,2,0,
