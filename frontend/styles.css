@@ -81,13 +81,13 @@ background: 0 0;
 border: 0;
 transition: color .15sease-in-out, background-color .15sease-in-out, border-color .15sease-in-out;
 }
-.custom-btn-primary {
+:root {
     --bs-btn-color: #ffc8c8;
     --bs-btn-bg: #645a4c;
     --bs-btn-border-color: #645a4c;
     --bs-btn-hover-color: #ffc8c8;
     --bs-btn-hover-bg: #151A1F;
-    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-hover-border-color: #151A1F;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #0a58ca;
