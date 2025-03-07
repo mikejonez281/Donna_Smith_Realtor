@@ -145,6 +145,9 @@ function updateTranslations() {
 //     updateContent(); // Re-render carousel with new language
 // });
 
-// Event Listeners
+// Event Listeners (Modified)
 window.addEventListener('hashchange', updateContent);
-window.addEventListener('load', updateContent);
+window.addEventListener('load', () => {
+    updateContent();
+    renderHome(); // Initial render after DOM is loaded
+});

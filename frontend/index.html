@@ -38,12 +38,12 @@
           <!-- Added some spacing with 'ms-2' -->
         </a>
 
-        <!-- Navigation Menu and Button wrapped together for alignment -->
-        <div class="d-flex align-items-center">
+        <!-- Navigation Menu and Button wrapped together for alignment  -->
+         <!-- <div class="d-flex align-items-center"> -->
           <!-- Navigation links -->
-          <ul class="nav nav-pills me-3">
-            <!-- Added 'me-3' to create space between the nav links and the button -->
-            <li class="nav-item">
+           <!-- <ul class="nav nav-pills me-3">  -->
+           <!-- !-Added 'me-3' to create space between the nav links and the button   -->
+              <!-- <li class="nav-item"> 
               <a href="#" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item"><a href="#" class="nav-link">Listings</a></li>
@@ -52,7 +52,37 @@
             </li>
             <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          </ul>
+          </ul>  -->
+
+          <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
+            <div class="container-fluid">
+
+              <button class="navbar-toggler custom-background" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active rounded-button" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Listings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          
 
           <!-- Language switch button -->
           <button class="btn custom-btn-primary btn-md px-3" id="language-switch">

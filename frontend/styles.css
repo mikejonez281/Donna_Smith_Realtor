@@ -85,6 +85,7 @@ transition: color .15sease-in-out, background-color .15sease-in-out, border-colo
     --bs-btn-color: #ffc8c8;
     --bs-btn-bg: #645a4c;
     --bs-btn-border-color: #645a4c;
+    /* Español Button */
     --bs-btn-hover-color: #ffc8c8;
     --bs-btn-hover-bg: #151A1F;
     --bs-btn-hover-border-color: #0a58ca;
@@ -97,3 +98,46 @@ transition: color .15sease-in-out, background-color .15sease-in-out, border-colo
     --bs-btn-disabled-bg: #0d6efd;
     --bs-btn-disabled-border-color: #0d6efd;
 } 
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #ddb295;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover{
+    color: black;
+}
+
+.navbar-custom .navbar-nav .nav-link:active{
+    color: #ddb295;
+}
+
+
+.rounded-button {
+    background-color: #635a4b;
+    color: #ddb295;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-item .active { /* Style the active link as a button */
+    background-color: #635a4b;
+    color: #ddb295;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.custom-background {
+    background-color: #635a4b!important;
+}
