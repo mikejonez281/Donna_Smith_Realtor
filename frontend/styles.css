@@ -34,7 +34,7 @@ body {
     padding: 2rem;
 }
 .footer {
-    background-color: #5e5e5e;
+    background-color: #645a4c;
     color: rgb(255, 255, 255);
     padding: 2rem;
 }
@@ -104,7 +104,7 @@ transition: color .15sease-in-out, background-color .15sease-in-out, border-colo
 }
 
 .navbar-custom .navbar-nav .nav-link:hover{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .navbar-custom .navbar-nav .nav-link:active{

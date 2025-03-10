@@ -99,7 +99,7 @@ function renderHome() {
     const carouselContent = getCarouselContent();
     document.getElementById('carousel-content').innerHTML = carouselContent;
 
-    return 'Blorp';
+    return 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.';
 }
 
 // Render Stars
