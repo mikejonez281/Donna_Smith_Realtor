@@ -19,9 +19,9 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <header
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom bg-light"
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom"
       >
         <!-- Logo and Brand Name -->
         <a
@@ -92,120 +92,62 @@
         </div>
       </header>
     </div>
-
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+<div class="carousel-img-wrapper" data-bs-ride="carousel">
+    <div class="container col-xxl-8 px-4 py-5"> 
+       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img
             src="home3.jpeg"
             class="d-block mx-lg-auto img-fluid"
             alt="Bootstrap Themes"
-            width="700"
-            height="500"
+            width="700"        
             loading="lazy"
           />
         </div>
-        <div id="carousel-content" class="col-lg-6"></div>
-        <!-- <div class="col-lg-6">
-          <div
-            id="reviewCarousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#reviewCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#reviewCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="">Next</span>
-            </button>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                  Review from Valverde Rentals
-                </h1>
-                <p class="lead">
-                  "Awesome Realtor, Donna is always at my service with my
-                  properties!"
-                </p>
-                <div class="stars">
-                  <script>
-                    document.write(renderStars(5));
-                  </script>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                  Review from Rivera Services
-                </h1>
-                <p class="lead">
-                  "Did multiple projects on Donna's home listing and excellent
-                  to work with"
-                </p>
-                <div class="stars">
-                  <script>
-                    document.write(renderStars(5));
-                  </script>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
+        <div id="carousel-content" class="col-md-6"></div>
         <div id="app"></div>
         <div id="page-content"></div>
-
-        <footer class="footer">
-          <div class="footer-content">
-            <div class="footer-section">
+      </div>
+</div>
+    </div>
+        <footer class="container-fluid mt-4">
+          <div class="row mx-auto text-center">
+            <div class="col-md-4">
               <h3>Contact</h3>
-              <p><a href="tel:+1 678-851-7170">Phone: +1 678-851-7170</a></p>
-              <p>
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com"
+              <a href="tel:+1 678-851-7170">Phone: +1 678-851-7170</a>
+                <br />
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com"
                   target="_blank"
-                  >Email: donnamsmithre@gmail.com</a
-                >
-              </p>
+                  >Email: donnamsmithre@gmail.com</a>
+    
             </div>
-            <div class="footer-section">
+            <div class="col-md-4">
               <h3>Quick Links</h3>
               <a href="#/services">Services</a>
+              <br /> 
               <a href="#/about">About</a>
+              <br /> 
               <a href="#/contact">Contact</a>
+              <br /> 
             </div>
-            <div class="footer-section">
+            <div class="col-md-4">
               <h3>Follow Us</h3>
               <div class="social-links">
                 <a href="https://www.facebook.com/donna.regeski">Facebook</a>
+                <br /> 
                 <a href="#instagram">Instagram</a>
+                <br /> 
                 <a href="#twitter">Twitter</a>
+                <br /> 
               </div>
             </div>
           </div>
           <div class="footer-bottom">
             <p>© 2025 Donna M. Smith Realty. All rights reserved.</p>
           </div>
+        
         </footer>
-      </div>
-    </div>
+      
     <script>
       document
         .getElementById("language-switch")

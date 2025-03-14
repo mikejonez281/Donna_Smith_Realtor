@@ -10,13 +10,13 @@ const translations = {
         },
         reviews: {
             valverde: {
-                title: 'Review from Valverde Rentals',
-                text: 'Awesome Realtor, Donna is always at my service with my properties',
+                title: 'Valverde Rentals, LLC Review',
+                text: '"Donna is an exceptional realtor who consistently provides outstanding service for all my properties."',
                 logo: 'FullLogo.jpg'
             },
             rivera: {
-                title: 'Review from Rivera Services',
-                text: 'Did multiple projects on Donna\'s home listing and excellent to work with',
+                title: 'Rivera All Services Review',
+                text: '"I have completed multiple projects on Donna\'s home listings and found her excellent to work with."',
                 logo: 'rivera.png'
             }
         },
@@ -33,12 +33,12 @@ const translations = {
         reviews: {
             valverde: {
                 title: 'Opinión de Valverde Rentals',
-                text: 'Gran agente inmobiliario, Donna siempre está a mi servicio con mis propiedades',
+                text: '"Donna es una agente inmobiliaria excepcional que siempre brinda un servicio impecable para la gestión de mis propiedades."',
                 logo: 'FullLogo.jpg'
             },
             rivera: {
                 title: 'Opinión de Rivera Services',
-                text: 'Realizó múltiples proyectos en la lista de casas de Donna y es excelente para trabajar',
+                text: '"He realizado múltiples proyectos en las listas de propiedades de Donna y ha sido un placer trabajar con ella debido a su profesionalismo y excelencia."',
                 logo: 'rivera.png'
             }
         },
@@ -98,6 +98,12 @@ function getCarouselContent() {
 function renderHome() {
     const carouselContent = getCarouselContent();
     document.getElementById('carousel-content').innerHTML = carouselContent;
+
+    // Select the element
+const element = document.getElementById('page-content');
+
+// Add a class to the element
+element.classList.add('lead');
 
     return 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.';
 }

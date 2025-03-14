@@ -33,14 +33,14 @@ body {
 #content {
     padding: 2rem;
 }
-.footer {
+footer {
     background-color: #645a4c;
     color: rgb(255, 255, 255);
     padding: 2rem;
 }
 .footer-content {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    /* justify-content: space-around; */
 }
 .footer-section a {
     color: #645a4c(114, 0, 0);
@@ -140,4 +140,24 @@ transition: color .15sease-in-out, background-color .15sease-in-out, border-colo
 
 .custom-background {
     background-color: #635a4b!important;
+}
+
+footer a {
+    color: #ddb295;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+.carousel-item {
+    min-height: 410px;
+    overflow:hidden;
+    
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
 }
