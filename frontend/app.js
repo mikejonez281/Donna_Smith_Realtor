@@ -20,7 +20,10 @@ const translations = {
                 logo: 'rivera.png'
             }
         },
-        home: { welcome: 'Welcome to Donna M. Smith Realty', review: 'Great service!' }
+        home: { 
+            welcome: 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.',
+            review: 'Great service!'
+        }
     },
     es: {
         nav: {
@@ -42,7 +45,10 @@ const translations = {
                 logo: 'rivera.png'
             }
         },
-        home: { welcome: 'Bienvenido a Donna M. Smith Realty', review: '¡Gran servicio!' }
+        home: { 
+            welcome: 'Bienvenido a la pagina de Donna Smith Realtor - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias.',
+            review: '¡Gran servicio!'
+        }
     }
 };
 
@@ -105,7 +111,7 @@ const element = document.getElementById('page-content');
 // Add a class to the element
 element.classList.add('lead');
 
-    return 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.';
+    return translations[state.language].home.welcome;
 }
 
 // Render Stars
