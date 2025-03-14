@@ -157,3 +157,12 @@ footer a:hover {
 .carousel-control-next {
   display: none !important;
 }
+#welcome-message {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    font-family: 'Arial', sans-serif; /* Change the font family as needed */
+    font-weight: normal; /* Adjust the font weight as needed */
+    text-align: center; /* Center the text */
+    width: 100%; /* Make the message go full width */
+    margin: 0; /* Remove default margin */
+    padding: 2rem 0; /* Add padding for spacing */
+}

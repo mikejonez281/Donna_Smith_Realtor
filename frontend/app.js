@@ -23,6 +23,16 @@ const translations = {
         home: { 
             welcome: 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.',
             review: 'Great service!'
+        },
+        footer: {
+            contact: 'Contact',
+            phone: 'Phone',
+            email: 'Email',
+            quickLinks: 'Quick Links',
+            followUs: 'Follow Us',
+            services: 'Services',
+            about: 'About',
+            contact: 'Contact'
         }
     },
     es: {
@@ -48,6 +58,16 @@ const translations = {
         home: { 
             welcome: 'Bienvenido a la pagina de Donna Smith Realtor - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias.',
             review: '¡Gran servicio!'
+        },
+        footer: {
+            contact: 'Contacto',
+            phone: 'Teléfono',
+            email: 'Correo',
+            quickLinks: 'Enlaces rápidos',
+            followUs: 'Síguenos',
+            services: 'Servicios',
+            about: 'Acerca de',
+            contact: 'Contacto'
         }
     }
 };
@@ -105,13 +125,12 @@ function renderHome() {
     const carouselContent = getCarouselContent();
     document.getElementById('carousel-content').innerHTML = carouselContent;
 
-    // Select the element
-const element = document.getElementById('page-content');
+    // Get the translated welcome message
+    const welcomeMessage = translations[state.language].home.welcome;
 
-// Add a class to the element
-element.classList.add('lead');
-
-    return translations[state.language].home.welcome;
+    // Set the welcome message above the carousel with the custom CSS class
+    document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
+    return translations[state.language].home.review;
 }
 
 // Render Stars
@@ -148,6 +167,16 @@ function updateTranslations() {
     links[3].textContent = t.nav.contact; // Contact
     links[4].textContent = t.nav.about; // About
     document.getElementById('language-switch').textContent = state.language === 'en' ? 'Español' : 'English';
+
+    // Update footer content
+    document.getElementById('footer-contact').textContent = t.footer.contact;
+    document.getElementById('footer-phone').textContent = t.footer.phone;
+    document.getElementById('footer-email').textContent = t.footer.email;
+    document.getElementById('footer-quick-links').textContent = t.footer.quickLinks;
+    document.getElementById('footer-follow-us').textContent = t.footer.followUs;
+    document.getElementById('footer-services').textContent = t.footer.services;
+    document.getElementById('footer-about').textContent = t.footer.about;
+    document.getElementById('footer-contact').textContent = t.footer.contact;
 }
 
 // Language Switch Event Listener
