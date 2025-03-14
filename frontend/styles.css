@@ -38,10 +38,6 @@ footer {
     color: rgb(255, 255, 255);
     padding: 2rem;
 }
-.footer-content {
-    /* display: flex; */
-    /* justify-content: space-around; */
-}
 .footer-section a {
     color: #645a4c(114, 0, 0);
     display: block;
