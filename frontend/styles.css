@@ -166,3 +166,12 @@ footer a:hover {
     margin: 0; /* Remove default margin */
     padding: 2rem 0; /* Add padding for spacing */
 }
+
+.logo-text {
+    font-size: large; /* Adjust the font size as needed */
+    font-family: 'Arial', sans-serif; /* Change the font family as needed */
+    font-weight: normal; /* Adjust the font weight as needed */
+    padding-bottom: 30px; /* Adjust the value as needed to shift the text up */
+    padding-left: 40px; /* Adjust the value as needed to shift the text to the right */
+}
+
