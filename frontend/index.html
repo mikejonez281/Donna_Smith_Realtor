@@ -17,15 +17,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/02bba9e42c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container-fluid">
       <header
         class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom"
+        style="position: fixed; width: 100%; z-index: 1000; background-color: white"
       >
         <!-- Logo and Brand Name -->
         <a
-          href="/"
+          href="index.html"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
         >
           <img
@@ -50,7 +52,7 @@
                     <a class="nav-link active rounded-button" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Listings</a>
+                    <a class="nav-link" href="https://www.northgroupre.com/index.php?showagency=1&rtype=" target="_blank">Listings</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Services</a>
@@ -74,6 +76,7 @@
         </div>
       </header>
     </div>
+    <div style="height:100px;"></div>
     <div class="container-fluid px-5 py-4">
       <div id="welcome-message" class="row"></div>
     </div>
@@ -101,9 +104,11 @@
           <h3 id="footer-contact">Contact</h3>
           <span>Donna M. Smith - Realtor&reg;</span> <!--&reg; is the html entity for ®-->
           <br />
-          <a id="footer-phone" href="#">Phone</a><a href="#">:</a> <a href="tel:+1 678-851-7170">+1 678-851-7170</a>
+          <span id="footer-mobile-label">Mobile</span>: <a href="tel:+1 (678) 851-7170" id="footer-mobile"><i class="fa-solid fa-mobile-screen"></i>+1 (678) 851-7170</a>
           <br />
-          <a id="footer-email">Email</a>: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com" target="_blank">donnamsmithre@gmail.com</a>
+          <span id="footer-office-label">Office</span>: <a href="tel:+1 (404)383-6616" id="footer-office"><i class="fa-solid fa-phone"></i>+1 (404) 383-6616</a>
+          <br />
+          <span id="footer-email-label">Email</span>: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com" target="_blank" id="footer-email"><i class="fa-solid fa-envelope"></i> donnamsmithre@gmail.com</a>
         </div>
         <div class="col-md-4">
           <h3 id="footer-quick-links">Quick Links</h3>
@@ -111,17 +116,17 @@
           <br /> 
           <a id="footer-about" href="#/about">About</a>
           <br /> 
-          <a id="footer-contact" href="#/contact">Contact</a>
+          <a id="footer-contact-link" href="#/contact">Contact</a>
           <br /> 
         </div>
         <div class="col-md-4">
           <h3 id="footer-follow-us">Follow Us</h3>
           <div class="social-links">
-            <a href="https://www.facebook.com/donna.regeski">Facebook</a>
+            <a href="https://www.facebook.com/donna.regeski">Facebook <i class="fa-brands fa-facebook"></i></a>
             <br /> 
-            <a href="#instagram">Instagram</a>
+            <a href="#instagram">Instagram <i class="fa-brands fa-instagram"></i></a>
             <br /> 
-            <a href="#twitter">Twitter</a>
+            <a href="#twitter">Twitter <i class="fa-brands fa-x-twitter"></i></a>
             <br /> 
           </div>
         </div>

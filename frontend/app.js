@@ -26,7 +26,8 @@ const translations = {
         },
         footer: {
             contact: 'Contact',
-            phone: 'Phone',
+            mobile: 'Mobile',
+            office: 'Office',
             email: 'Email',
             quickLinks: 'Quick Links',
             followUs: 'Follow Us',
@@ -61,7 +62,8 @@ const translations = {
         },
         footer: {
             contact: 'Contacto',
-            phone: 'Teléfono',
+            mobile: 'Móvil',
+            office: 'Oficina',
             email: 'Correo',
             quickLinks: 'Enlaces rápidos',
             followUs: 'Síguenos',
@@ -170,13 +172,14 @@ function updateTranslations() {
 
     // Update footer content
     document.getElementById('footer-contact').textContent = t.footer.contact;
-    document.getElementById('footer-phone').textContent = t.footer.phone;
-    document.getElementById('footer-email').textContent = t.footer.email;
+    document.getElementById('footer-mobile-label').textContent = t.footer.mobile;
+    document.getElementById('footer-office-label').textContent = t.footer.office;
+    document.getElementById('footer-email-label').textContent = t.footer.email;
     document.getElementById('footer-quick-links').textContent = t.footer.quickLinks;
     document.getElementById('footer-follow-us').textContent = t.footer.followUs;
+    document.getElementById('footer-contact-link').textContent = t.footer.contact;
     document.getElementById('footer-services').textContent = t.footer.services;
     document.getElementById('footer-about').textContent = t.footer.about;
-    document.getElementById('footer-contact').textContent = t.footer.contact;
 }
 
 // Language Switch Event Listener
