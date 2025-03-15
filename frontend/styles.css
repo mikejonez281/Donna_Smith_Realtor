@@ -169,9 +169,17 @@ footer a:hover {
 
 .logo-text {
     font-size: large; /* Adjust the font size as needed */
-    font-family: 'Arial', sans-serif; /* Change the font family as needed */
-    font-weight: normal; /* Adjust the font weight as needed */
-    padding-bottom: 30px; /* Adjust the value as needed to shift the text up */
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font */
+    font-weight: 500; /* Set the font weight to a value between normal and bold */
+    padding-bottom: 35px; /* Adjust the value as needed to shift the text up */
     padding-left: 40px; /* Adjust the value as needed to shift the text to the right */
+    color: #34404a; /* Set the text color */
 }
 
+.ngre-logo {
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    width: 180px;
+    height: 70px;
+}

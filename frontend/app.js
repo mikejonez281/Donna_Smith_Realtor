@@ -21,7 +21,7 @@ const translations = {
             }
         },
         home: { 
-            welcome: 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs.',
+            welcome: 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs. Licensed in Georgia, South Carolina, and North Carolina.',
             review: 'Great service!'
         },
         footer: {
@@ -57,7 +57,7 @@ const translations = {
             }
         },
         home: { 
-            welcome: 'Bienvenido a la pagina de Donna Smith Realtor - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias.',
+            welcome: 'Bienvenido a la página de Donna Smith Realtor - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias. Licenciada en Georgia, Carolina del Sur y Carolina del Norte.',
             review: '¡Gran servicio!'
         },
         footer: {
