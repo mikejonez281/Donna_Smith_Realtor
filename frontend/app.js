@@ -21,8 +21,8 @@ const translations = {
             }
         },
         home: { 
-            welcome: 'Welcome to Donna Smith Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs. Licensed in Georgia, South Carolina, and North Carolina.',
-            review: 'Great service!'
+            welcome: "Welcome to Donna Smith's Realtor Page - With a focus on customer service, we are here to help you find your dream home and with over 20 years of experience, we are here to help you with all your real estate needs. Licensed in Georgia, South Carolina, and North Carolina.",
+            review: "Great service!"
         },
         footer: {
             contact: 'Contact',
@@ -33,7 +33,8 @@ const translations = {
             followUs: 'Follow Us',
             services: 'Services',
             about: 'About',
-            contact: 'Contact'
+            contact: 'Contact',
+            copyright: "&copy; 2025 Donna M. Smith Realty. All rights reserved."
         }
     },
     es: {
@@ -57,7 +58,7 @@ const translations = {
             }
         },
         home: { 
-            welcome: 'Bienvenido a la página de Donna Smith Realtor - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias. Licenciada en Georgia, Carolina del Sur y Carolina del Norte.',
+            welcome: 'Bienvenido a la página de la Realtor Donna Smith - Con un enfoque en el servicio al cliente, estamos aquí para ayudarle a encontrar la casa de sus sueños y, con más de 20 años de experiencia, estamos aquí para asistirle con todas sus necesidades inmobiliarias. Licenciada en Georgia, Carolina del Sur y Carolina del Norte.',
             review: '¡Gran servicio!'
         },
         footer: {
@@ -69,7 +70,8 @@ const translations = {
             followUs: 'Síguenos',
             services: 'Servicios',
             about: 'Acerca de',
-            contact: 'Contacto'
+            contact: 'Contacto',
+            copyright: "&copy; 2025 Donna M. Smith Realty. Todos los derechos reservados."
         }
     }
 };
@@ -180,6 +182,8 @@ function updateTranslations() {
     document.getElementById('footer-contact-link').textContent = t.footer.contact;
     document.getElementById('footer-services').textContent = t.footer.services;
     document.getElementById('footer-about').textContent = t.footer.about;
+    document.querySelector('.footer-bottom p').innerHTML = t.footer.copyright;
+
 }
 
 // Language Switch Event Listener
