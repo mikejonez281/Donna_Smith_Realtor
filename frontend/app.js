@@ -35,6 +35,21 @@ const translations = {
             about: 'About',
             contact: 'Contact',
             copyright: "&copy; 2025 Donna M. Smith Realty. All rights reserved."
+        },
+        services: {
+            title: "Our Services",
+            description: "Explore our real estate services:",
+            list: [
+                "Find homes & schedule tours",
+                "Help with offers & negotiations",
+                "Guide through financing & closing",
+                "Price & list your home",
+                "Market & advertise",
+                "Handle showings & offers",
+                "Find rental & investment properties",
+                "Short-term rental advice",
+                "Home improvement advice"
+            ]
         }
     },
     es: {
@@ -72,6 +87,21 @@ const translations = {
             about: 'Acerca de',
             contact: 'Contacto',
             copyright: "&copy; 2025 Donna M. Smith Realty. Todos los derechos reservados."
+        },
+        services: {
+            title: "Nuestros Servicios",
+            description: "Explore nuestros servicios inmobiliarios:",
+            list: [
+                "Encuentra casas y programa visitas",
+                "Ayuda con ofertas y negociaciones",
+                "Guía a través de financiamiento y cierre",
+                "Valora y lista tu casa",
+                "Promociona y publicita",
+                "Gestiona visitas y ofertas",
+                "Encuentra propiedades de alquiler e inversión",
+                "Asesoramiento en alquileres a corto plazo",
+                "Consejos para mejoras en el hogar"
+            ]
         }
     }
 };
@@ -83,7 +113,7 @@ let state = { language: 'en' };
 const routes = {
     '/': () => renderHome(),
     '/about': () => '<h1>About Donna M. Smith Realty</h1><p>Learn more about us.</p>',
-    '/services': () => '<h1>Services</h1><p>Explore our real estate services.</p>',
+    '/services': () => '<h1>Services</h1><p>Explore our real estate services</p>',
     '/contact': () => '<h1>Contact</h1><p>Get in touch with us!</p>'
 
 };
@@ -158,12 +188,24 @@ function updateContent() {
     const path = window.location.hash.slice(1) || '/';
     const content = routes[path] ? routes[path]() : '<h1>404 Not Found</h1>';
     document.getElementById('page-content').innerHTML = content;
+
+    // Ensure translations are updated for the current route
     updateTranslations();
+
+    // Handle specific cases for Home and Services
+    if (path === '/') {
+        renderHome(); // Render the carousel and welcome message for Home
+    } else if (path === '/services') {
+        showServicesLayer(); // Ensure the Services layer is displayed
+    }
 }
 
 // Update Translations for Navigation
 function updateTranslations() {
     const t = translations[state.language];
+    const path = window.location.hash.slice(1) || '/';
+
+    // Update navigation links
     const links = document.querySelectorAll('.nav-link');
     links[0].textContent = t.nav.home; // Home
     links[1].textContent = t.nav.listings; // Listings
@@ -184,14 +226,26 @@ function updateTranslations() {
     document.getElementById('footer-about').textContent = t.footer.about;
     document.querySelector('.footer-bottom p').innerHTML = t.footer.copyright;
 
-}
+    // Update content based on the current route
+    if (path === '/') {
+        // Update carousel and welcome message for Home
+        const welcomeMessage = t.home.welcome;
+        document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
+        renderHome(); // Re-render the carousel with the updated language
+    } else if (path === '/services') {
+        // Update services section
+        const servicesTitle = document.querySelector('#services-layer h1');
+        const servicesDescription = document.querySelector('#services-layer p');
+        const servicesList = document.querySelector('#services-layer ul');
 
-// Language Switch Event Listener
-// document.getElementById('language-switch').addEventListener('click', () => {
-//     state.language = state.language === 'en' ? 'es' : 'en';
-//     updateTranslations();
-//     updateContent(); // Re-render carousel with new language
-// });
+        const welcomeMessage = t.home.welcome;
+        document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
+        
+        servicesTitle.textContent = t.services.title;
+        servicesDescription.textContent = t.services.description;
+        servicesList.innerHTML = t.services.list.map(item => `<li>${item}</li>`).join('');
+    }
+}
 
 // Event Listeners (Modified)
 window.addEventListener('hashchange', updateContent);
@@ -199,3 +253,23 @@ window.addEventListener('load', () => {
     updateContent();
     renderHome(); // Initial render after DOM is loaded
 });
+
+function showServicesLayer() {
+  const carouselLayer = document.getElementById('carousel-layer');
+  const servicesLayer = document.getElementById('services-layer');
+
+  // Hide the carousel layer and show the services layer
+  carouselLayer.style.display = 'none';
+  servicesLayer.style.display = 'block';
+  servicesLayer.style.zIndex = 2;
+}
+
+function showCarouselLayer() {
+  const carouselLayer = document.getElementById('carousel-layer');
+  const servicesLayer = document.getElementById('services-layer');
+
+  // Show the carousel layer and hide the services layer
+  carouselLayer.style.display = 'block';
+  servicesLayer.style.display = 'none';
+  servicesLayer.style.zIndex = 0;
+}
