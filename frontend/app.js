@@ -39,6 +39,7 @@ const translations = {
         services: {
             title: "Our Services",
             description: "Explore our real estate services:",
+            welcome: "Explore our wide range of real estate services tailored to your needs.",
             list: [
                 "Find homes & schedule tours",
                 "Help with offers & negotiations",
@@ -91,6 +92,7 @@ const translations = {
         services: {
             title: "Nuestros Servicios",
             description: "Explore nuestros servicios inmobiliarios:",
+            welcome: "Descubra nuestra amplia gama de servicios inmobiliarios adaptados a sus necesidades.",
             list: [
                 "Encuentra casas y programa visitas",
                 "Ayuda con ofertas y negociaciones",
@@ -226,24 +228,20 @@ function updateTranslations() {
     document.getElementById('footer-about').textContent = t.footer.about;
     document.querySelector('.footer-bottom p').innerHTML = t.footer.copyright;
 
+    // Update welcome message based on the current route
+    let welcomeMessage = '';
+    if (path === '/') {
+        welcomeMessage = t.home.welcome;
+    } else if (path === '/services') {
+        welcomeMessage = t.services.welcome;
+    }
+    document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
+
     // Update content based on the current route
     if (path === '/') {
-        // Update carousel and welcome message for Home
-        const welcomeMessage = t.home.welcome;
-        document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
         renderHome(); // Re-render the carousel with the updated language
     } else if (path === '/services') {
-        // Update services section
-        const servicesTitle = document.querySelector('#services-layer h1');
-        const servicesDescription = document.querySelector('#services-layer p');
-        const servicesList = document.querySelector('#services-layer ul');
-
-        const welcomeMessage = t.home.welcome;
-        document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
-        
-        servicesTitle.textContent = t.services.title;
-        servicesDescription.textContent = t.services.description;
-        servicesList.innerHTML = t.services.list.map(item => `<li>${item}</li>`).join('');
+        updateServicesLayer(); // Update the services layer
     }
 }
 
@@ -255,13 +253,21 @@ window.addEventListener('load', () => {
 });
 
 function showServicesLayer() {
-  const carouselLayer = document.getElementById('carousel-layer');
-  const servicesLayer = document.getElementById('services-layer');
+    const carouselLayer = document.getElementById('carousel-layer');
+    const servicesLayer = document.getElementById('services-layer');
 
-  // Hide the carousel layer and show the services layer
-  carouselLayer.style.display = 'none';
-  servicesLayer.style.display = 'block';
-  servicesLayer.style.zIndex = 2;
+    // Hide the carousel layer and show the services layer
+    carouselLayer.style.display = 'none';
+    servicesLayer.style.display = 'block';
+    servicesLayer.style.zIndex = 2;
+
+    // Update the welcome message for the Services section
+    const t = translations[state.language];
+    const welcomeMessage = t.services.welcome;
+    document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
+
+    // Update the services layer content with the current language
+    updateServicesLayer();
 }
 
 function showCarouselLayer() {
@@ -272,4 +278,21 @@ function showCarouselLayer() {
   carouselLayer.style.display = 'block';
   servicesLayer.style.display = 'none';
   servicesLayer.style.zIndex = 0;
+}
+
+function updateServicesLayer() {
+    const t = translations[state.language];
+
+    const servicesTitle = document.querySelector('#services-layer h1');
+    const servicesDescription = document.querySelector('#services-layer p');
+    const servicesList = document.querySelector('#services-layer ul');
+
+    servicesTitle.textContent = t.services.title;
+    servicesDescription.textContent = t.services.description;
+    servicesList.innerHTML = t.services.list.map(item => `<li>${item}</li>`).join('');
+}
+
+function navigateToServices() {
+    window.location.hash = '/services'; // Update the URL hash
+    updateContent(); // Trigger content update
 }
