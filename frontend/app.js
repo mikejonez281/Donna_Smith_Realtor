@@ -51,6 +51,17 @@ const translations = {
                 "Short-term rental advice",
                 "Home improvement advice"
             ]
+        },
+        contact: {
+            title: "Contact Us",
+            description: "We'd love to hear from you! Please fill out the form below.",
+            welcome: "Get in touch with Donna Smith Realty for all your real estate needs.",
+            form: {
+                name: "Your Name",
+                email: "Your Email",
+                message: "Your Message",
+                submit: "Submit"
+            }
         }
     },
     es: {
@@ -104,6 +115,17 @@ const translations = {
                 "Asesoramiento en alquileres a corto plazo",
                 "Consejos para mejoras en el hogar"
             ]
+        },
+        contact: {
+            title: "Contáctenos",
+            description: "¡Nos encantaría saber de usted! Por favor complete el formulario a continuación.",
+            welcome: "Póngase en contacto con Donna Smith Realty para todas sus necesidades inmobiliarias.",
+            form: {
+                name: "Su Nombre",
+                email: "Su Correo Electrónico",
+                message: "Su Mensaje",
+                submit: "Enviar"
+            }
         }
     }
 };
@@ -199,7 +221,10 @@ function updateContent() {
         renderHome(); // Render the carousel and welcome message for Home
     } else if (path === '/services') {
         showServicesLayer(); // Ensure the Services layer is displayed
+    } else if (path === '/contact') {
+        showContactLayer(); // Ensure the Contact layer is displayed
     }
+    
 }
 
 // Update Translations for Navigation
@@ -217,13 +242,12 @@ function updateTranslations() {
     document.getElementById('language-switch').textContent = state.language === 'en' ? 'Español' : 'English';
 
     // Update footer content
-    document.getElementById('footer-contact').textContent = t.footer.contact;
     document.getElementById('footer-mobile-label').textContent = t.footer.mobile;
     document.getElementById('footer-office-label').textContent = t.footer.office;
     document.getElementById('footer-email-label').textContent = t.footer.email;
     document.getElementById('footer-quick-links').textContent = t.footer.quickLinks;
     document.getElementById('footer-follow-us').textContent = t.footer.followUs;
-    document.getElementById('footer-contact-link').textContent = t.footer.contact;
+    document.getElementById('footer-contact').textContent = t.footer.contact;
     document.getElementById('footer-services').textContent = t.footer.services;
     document.getElementById('footer-about').textContent = t.footer.about;
     document.querySelector('.footer-bottom p').innerHTML = t.footer.copyright;
@@ -234,6 +258,8 @@ function updateTranslations() {
         welcomeMessage = t.home.welcome;
     } else if (path === '/services') {
         welcomeMessage = t.services.welcome;
+    } else if (path === '/contact') {
+        welcomeMessage = t.contact.welcome;
     }
     document.getElementById('welcome-message').innerHTML = `<h3>${welcomeMessage}</h3>`;
 
@@ -242,6 +268,8 @@ function updateTranslations() {
         renderHome(); // Re-render the carousel with the updated language
     } else if (path === '/services') {
         updateServicesLayer(); // Update the services layer
+    } else if (path === '/contact') {
+        updateContactLayer(); // Update the contact layer
     }
 }
 
@@ -255,11 +283,16 @@ window.addEventListener('load', () => {
 function showServicesLayer() {
     const carouselLayer = document.getElementById('carousel-layer');
     const servicesLayer = document.getElementById('services-layer');
+    const contactLayer = document.getElementById('contact-layer');
 
     // Hide the carousel layer and show the services layer
     carouselLayer.style.display = 'none';
     servicesLayer.style.display = 'block';
     servicesLayer.style.zIndex = 2;
+
+    // Hide the carousel layer and show the contact layer
+    contactLayer.style.display = 'none';
+    contactLayer.style.zIndex = 0;
 
     // Update the welcome message for the Services section
     const t = translations[state.language];
@@ -268,16 +301,37 @@ function showServicesLayer() {
 
     // Update the services layer content with the current language
     updateServicesLayer();
+
+    // Update the services layer content with the current language
+    updateContactLayer();
 }
+
+function showContactLayer() {
+    const carouselLayer = document.getElementById('carousel-layer');
+    const servicesLayer = document.getElementById('services-layer');
+    const contactLayer = document.getElementById('contact-layer');
+  
+  
+    // Show the carousel layer and hide the services and contact layer
+    carouselLayer.style.display = 'none';
+    servicesLayer.style.display = 'none';
+    servicesLayer.style.zIndex = 0;
+    contactLayer.style.display = 'block';
+    contactLayer.style.zIndex = 2;
+  }
 
 function showCarouselLayer() {
   const carouselLayer = document.getElementById('carousel-layer');
   const servicesLayer = document.getElementById('services-layer');
+  const contactLayer = document.getElementById('contact-layer');
 
-  // Show the carousel layer and hide the services layer
+
+  // Show the carousel layer and hide the services and contact layer
   carouselLayer.style.display = 'block';
   servicesLayer.style.display = 'none';
   servicesLayer.style.zIndex = 0;
+  contactLayer.style.display = 'none';
+  contactLayer.style.zIndex = 0;
 }
 
 function updateServicesLayer() {
@@ -292,8 +346,25 @@ function updateServicesLayer() {
     servicesList.innerHTML = t.services.list.map(item => `<li>${item}</li>`).join('');
 }
 
+function updateContactLayer() {
+    const t = translations[state.language];
+
+    const contactTitle = document.querySelector('#contact-layer h1');
+    const contactDescription = document.querySelector('#contact-layer p');
+    const contactList = document.querySelector('#contact-layer ul');
+
+    contactTitle.textContent = t.contact.title;
+    contactDescription.textContent = t.contact.description;
+    // contactList.innerHTML = t.contact.form.map(item => `<li>${item}</li>`).join('');
+}
+
 function navigateToServices() {
     window.location.hash = '/services'; // Update the URL hash
+    updateContent(); // Trigger content update
+}
+
+function navigateToContact() {
+    window.location.hash = '/contact'; // Update the URL hash
     updateContent(); // Trigger content update
 }
 

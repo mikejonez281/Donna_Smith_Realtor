@@ -63,7 +63,7 @@
                     <a class="nav-link" href="#/services" onclick="navigateToServices()">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#/contact" onclick="navigateToContact()">Contact</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -81,6 +81,8 @@
         </div>
       </header>
     </div>
+    <br/>
+    <br/>
     <div style="height:100px;"></div>
     <div class="container-fluid px-5 py-4">
       <div id="welcome-message" class="row"></div>
@@ -102,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div id="services-layer" class="layer" style="z-index: 0; position: relative; top: 0; left: 0; width: 100%; display: none;">
+      <div id="services-layer" class="layer" style="z-index: 0; position: relative; width: 100%; display: none;">
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -133,6 +135,32 @@
         </div>
       </div>
     </div>
+    <div id="contact-layer" class="contact" style="z-index: 0; position: relative; width: 100%; display: none;">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="home1.jpg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Contact Image"
+              width="700"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact Us</h1>
+            <p class="lead">Explore our real estate services:</p>
+            <ul>
+              <li>TEST</li>
+              <li>TEST</li>
+              <li>TEST</li>
+              <li>TEST</li>
+              <li>TEST</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="app"></div>
     <div id="page-content"></div>
     <footer class="container-fluid mt-4">
@@ -153,7 +181,7 @@
           <br /> 
           <a id="footer-about" href="#/about">About</a>
           <br /> 
-          <a id="footer-contact-link" href="#/contact">Contact</a>
+          <a href="#/contact" id="footer-contact">Contact</a>
           <br /> 
         </div>
         <div class="col-md-4">
