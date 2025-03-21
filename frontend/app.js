@@ -296,3 +296,5 @@ function navigateToServices() {
     window.location.hash = '/services'; // Update the URL hash
     updateContent(); // Trigger content update
 }
+
+//Testing GIT
