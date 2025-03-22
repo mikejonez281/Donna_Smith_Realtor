@@ -121,13 +121,13 @@ const translations = {
             description: "¡Nos encantaría saber de usted! Por favor complete el formulario a continuación.",
             welcome: "Póngase en contacto con Donna Smith Realty para todas sus necesidades inmobiliarias.",
             form: {
-                name: "Su Nombre",
-                email: "Su Correo Electrónico",
-                message: "Su Mensaje",
+                name: "Nombre",
+                email: "Correo Electrónico",
+                message: "Mensaje",
                 submit: "Enviar"
             }
-        }
-    }
+        },
+     }
 };
 
 // State
@@ -351,11 +351,11 @@ function updateContactLayer() {
 
     const contactTitle = document.querySelector('#contact-layer h1');
     const contactDescription = document.querySelector('#contact-layer p');
-    const contactList = document.querySelector('#contact-layer ul');
+    const contactFormTitle = document.querySelector('#contact-layer h2');
 
     contactTitle.textContent = t.contact.title;
     contactDescription.textContent = t.contact.description;
-    // contactList.innerHTML = t.contact.form.map(item => `<li>${item}</li>`).join('');
+    contactFormTitle.textContent = t.contact.form.title; // Update h2 for the form
 }
 
 function navigateToServices() {
@@ -368,4 +368,4 @@ function navigateToContact() {
     updateContent(); // Trigger content update
 }
 
-//Testing GIT
+
