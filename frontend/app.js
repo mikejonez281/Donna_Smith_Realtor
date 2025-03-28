@@ -149,7 +149,7 @@ Beyond real estate, Donna is an avid pickleball player, quilter, and HAM radio o
       },
     },
     about: {
-        title: "Acerca De",
+        title: "",
         welcome:"Acerca De Nosotros",
         description:`Acerca de Donna Smith 
 
