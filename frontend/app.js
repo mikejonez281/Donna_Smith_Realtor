@@ -61,10 +61,11 @@ const translations = {
       welcome:
         "Get in touch with Donna Smith Realty for all your real estate needs.",
       form: {
-        name: "Your Name",
-        email: "Your Email",
-        message: "Your Message",
-        submit: "Submit",
+        name: "Name",
+        email: "Email",
+        phone: "Phone",
+        message: "Message",
+        submit: "Send Message",
       },
     },
     about: {
@@ -144,8 +145,9 @@ Beyond real estate, Donna is an avid pickleball player, quilter, and HAM radio o
       form: {
         name: "Nombre",
         email: "Correo Electrónico",
+        phone: "Teléfono",
         message: "Mensaje",
-        submit: "Enviar",
+        submit: "Enviar Mensaje",
       },
     },
     about: {
@@ -436,15 +438,16 @@ function updateServicesLayer() {
 }
 
 function updateContactLayer() {
-  const t = translations[state.language];
+  const t = translations[state.language].contact.form;
 
-  const contactTitle = document.querySelector("#contact-layer h1");
-  const contactDescription = document.querySelector("#contact-layer p");
-  const contactFormTitle = document.querySelector("#contact-layer h2");
+  // Update form labels
+  document.querySelector('label[for="name"]').textContent = t.name;
+  document.querySelector('label[for="email"]').textContent = t.email;
+  document.querySelector('label[for="phone"]').textContent = t.phone;
+  document.querySelector('label[for="message"]').textContent = t.message;
 
-  contactTitle.textContent = t.contact.title;
-  contactDescription.textContent = t.contact.description;
-  contactFormTitle.textContent = t.contact.form.title; // Update h2 for the form
+  // Update submit button
+  document.querySelector('.btn-primary').textContent = t.submit;
 }
 
 function updateAboutLayer() {
