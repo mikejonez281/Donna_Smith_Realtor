@@ -175,9 +175,9 @@
             />
           </div>
           <div class="col-md-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact Us</h1>
-            <p class="lead">We'd love to hear from you! Please fill out the form below.</p>
-            <h2>Send us a Message</h2>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" id="contact-form-title">Contact Us</h1>
+            <p class="lead" id="contact-form-lead">We'd love to hear from you! Please fill out the form below.</p>
+            <h2 id="contact-form-subtitle">Send us a Message</h2>
             <form id="contactForm">
               <div class="mb-3 row">
                 <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -287,6 +287,23 @@
           state.language = state.language === "en" ? "es" : "en";
           updateTranslations();
           updateContent(); // Re-render carousel with new language
+
+          // Update the contact form title text
+          const contactFormTitle = document.getElementById("contact-form-title");
+          contactFormTitle.textContent =
+            state.language === "en" ? "Contact Us" : "Contáctenos";
+
+          // Update the contact form lead text
+          const contactFormLead = document.getElementById("contact-form-lead");
+          contactFormLead.textContent =
+            state.language === "en"
+              ? "We'd love to hear from you! Please fill out the form below."
+              : "¡Nos encantaría saber de usted! Por favor complete el formulario a continuación.";
+
+          // Update the contact form subtitle text
+          const contactFormSubtitle = document.getElementById("contact-form-subtitle");
+          contactFormSubtitle.textContent =
+            state.language === "en" ? "Send us a Message" : "Envíanos un mensaje";
         });
     </script>
   </body>
