@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donna M. Smith Realty</title>
+    <meta name="description" content="Donna M. Smith Realty - Your trusted real estate partner." />
+    <meta name="author" content="Donna M. Smith Realty" />
+    <link rel="canonical" href="https://donnamsmithhomes.com" />
+    <meta property="og:url" content="https://donnamsmithhomes.com" />
+    <meta property="og:title" content="Donna M. Smith Realty" />
+    <meta property="og:description" content="Your trusted real estate partner." />
+    <meta property="og:image" content="https://donnamsmithhomes.com/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/02bba9e42c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom"
+        style="position: fixed; width: 99%; z-index: 1000; background-color: white"
+      >
+        <!-- Logo and Brand Name -->
+        <a
+          href="index.html"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img
+            src="logo.png"
+            width="40"
+            alt="Donna M. Smith Realty Logo"
+            class="logo-image rounded-4" 
+          />
+          <span class="fs-4 ms-2 logo-text">Donna M. Smith</span>
+          <img
+            src="NGRE.png"
+            class="ngre-logo"
+            alt="NGRE Logo"
+          />
+          <!-- Added some spacing with 'ms-2' -->
+        </a>
+
+          <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
+            <div class="container-fluid">
+
+              <button class="navbar-toggler custom-background" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active rounded-button" aria-current="page" href="#" onclick="showCarouselLayer();">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.northgroupre.com/index.php?showagency=1&rtype=" target="_blank">Listings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#/services" onclick="navigateToServices()">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#/contact" onclick="navigateToContact()">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#/about" onclick="navigateToAbout()">About</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Language switch button -->
+          <button class="btn custom-btn-primary btn-md px-3" id="language-switch">
+            Español
+          </button>
+          <!-- Reduced button size using 'btn-sm' and adjusted padding with 'px-3' -->
+        </div>
+      </header>
+    </div>
+    <br/>
+    <br/>
+    <div style="height:100px;"></div>
+    <div class="container-fluid px-5 py-4">
+      <div id="welcome-message" class="row"></div>
+    </div>
+    <div class="carousel-img-wrapper" data-bs-ride="carousel">
+      <div id="carousel-layer" class="layer" style="z-index: 1; position: relative;">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img
+                src="home3.jpeg"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Bootstrap Themes"
+                width="700"
+                loading="lazy"
+              />
+            </div>
+            <div id="carousel-content" class="col-md-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services-layer" class="layer" style="z-index: 0; position: relative; width: 100%; display: none;">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="home2.jpg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Services Image"
+              width="700"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Our Services</h1>
+            <p class="lead">Explore our real estate services:</p>
+            <ul>
+              <li>Find homes & schedule tours</li>
+              <li>Help with offers & negotiations</li>
+              <li>Guide through financing & closing</li>
+              <li>Price & list your home</li>
+              <li>Market & advertise</li>
+              <li>Handle showings & offers</li>
+              <li>Find rental & investment properties</li>
+              <li>Short-term rental advice</li>
+              <li>Home improvement advice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-layer" class="layer" style="z-index: 0; position: relative; width: 100%; display: none;">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="mainhome.jpg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="About Image"
+              width="700"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Our Services</h1>
+            <p class="lead">About Us:</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact-layer" class="contact" style="z-index: 0; position: relative; width: 100%; display: none;">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="home1.jpg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Contact Image"
+              width="700"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" id="contact-form-title">Contact Us</h1>
+            <p class="lead" id="contact-form-lead">We'd love to hear from you! Please fill out the form below.</p>
+            <h2 id="contact-form-subtitle">Send us a Message</h2>
+            <form id="contactForm">
+              <div class="mb-3 row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="name" name="name" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" id="email" name="email" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-10">
+                  <input type="tel" id="phone" name="phone" class="form-control" />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="message" class="col-sm-2 col-form-label">Message</label>
+                <div class="col-sm-10">
+                  <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <div id="page-content"></div>
+    <footer class="container-fluid mt-4">
+      <div class="row mx-auto text-center">
+        <div class="col-md-4">
+          <h3 id="footer-contact">Contact</h3>
+          <span>Donna M. Smith - Realtor&reg;</span> <!--&reg; is the html entity for ®-->
+          <br />
+          <span id="footer-mobile-label">Mobile</span>: <a href="tel:+1 (678) 851-7170" id="footer-mobile"><i class="fa-solid fa-mobile-screen"></i>+1 (678) 851-7170</a>
+          <br />
+          <span id="footer-office-label">Office</span>: <a href="tel:+1 (404)383-6616" id="footer-office"><i class="fa-solid fa-phone"></i>+1 (404) 383-6616</a>
+          <br />
+          <span id="footer-email-label">Email</span>: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=donnamsmithre@gmail.com" target="_blank" id="footer-email"><i class="fa-solid fa-envelope"></i> donnamsmithre@gmail.com</a>
+        </div>
+        <div class="col-md-4">
+          <h3 id="footer-quick-links">Quick Links</h3>
+          <a href="#/services" id="footer-services">Services</a>
+          <br /> 
+          <a id="footer-about" href="#/about">About</a>
+          <br /> 
+          <a href="#/contact" id="footer-contact">Contact</a>
+          <br /> 
+        </div>
+        <div class="col-md-4">
+          <h3 id="footer-follow-us">Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/donna.regeski">Facebook <i class="fa-brands fa-facebook"></i></a>
+            <br /> 
+            <a href="#instagram">Instagram <i class="fa-brands fa-instagram"></i></a>
+            <br /> 
+            <a href="#twitter">Twitter <i class="fa-brands fa-x-twitter"></i></a>
+            <br /> 
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="footer-copyright">&copy; 2025 Donna M. Smith Realty. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> <!-- Updated SDK -->
+    <script>
+      // Initialize EmailJS
+      emailjs.init("mlM_pOo9FEfaFQ4m4"); // Public Key
+
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Collect form data
+        const formData = {
+          name: document.getElementById("name").value, // Matches "name" in EmailJS template
+          email: document.getElementById("email").value, // Matches "email" in EmailJS template
+          phone: document.getElementById("phone").value, // Matches "phone" in EmailJS template
+          message: document.getElementById("message").value, // Matches "message" in EmailJS template
+        };
+
+        // Send email using EmailJS
+        emailjs
+          .send("service_u3m1349", "template_ut86o5o", formData) // Correct service and template IDs
+          .then(
+            function (response) {
+              alert("Message sent successfully!");
+              document.getElementById("contactForm").reset();
+            },
+            function (error) {
+              alert("Failed to send message. Please try again later.");
+              console.error("EmailJS Error:", error);
+            }
+          );
+      });
+
+      document
+        .getElementById("language-switch")
+        .addEventListener("click", () => {
+          state.language = state.language === "en" ? "es" : "en";
+          updateTranslations();
+          updateContent(); // Re-render carousel with new language
+
+          // Update the contact form title text
+          const contactFormTitle = document.getElementById("contact-form-title");
+          contactFormTitle.textContent =
+            state.language === "en" ? "Contact Us" : "Contáctenos";
+
+          // Update the contact form lead text
+          const contactFormLead = document.getElementById("contact-form-lead");
+          contactFormLead.textContent =
+            state.language === "en"
+              ? "We'd love to hear from you! Please fill out the form below."
+              : "¡Nos encantaría saber de usted! Por favor complete el formulario a continuación.";
+
+          // Update the contact form subtitle text
+          const contactFormSubtitle = document.getElementById("contact-form-subtitle");
+          contactFormSubtitle.textContent =
+            state.language === "en" ? "Send us a Message" : "Envíanos un mensaje";
+        });
+    </script>
+  </body>
+</html>
