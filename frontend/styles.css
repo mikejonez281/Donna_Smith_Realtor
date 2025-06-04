@@ -168,7 +168,7 @@ footer a:hover {
 }
 
 .logo-text {
-    font-size: 2.5rem; /* Increased font size */*/
+    font-size: 2.5rem; /* Increased font size */
     font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     padding-bottom: 35px;
@@ -182,12 +182,4 @@ footer a:hover {
     top: 30px;
     width: 180px;
     height: 70px;
-}
-
-@font-face {
-  font-family: 'Conqueror Text Medium';
-  src: url('fonts/ConquerorText-Medium.woff2') format('woff2'),
-       url('fonts/ConquerorText-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
