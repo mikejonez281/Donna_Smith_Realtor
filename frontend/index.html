@@ -253,7 +253,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> <!-- Updated SDK -->
     <script>
       // Initialize EmailJS
-      emailjs.init("mlM_pOo9FEfaFQ4m4"); // Public Key
+      emailjs.init("EJ_a6J8T__hxNkyNj"); // New Public Key
 
       document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -268,7 +268,7 @@
 
         // Send email using EmailJS
         emailjs
-          .send("service_u3m1349", "template_ut86o5o", formData) // Correct service and template IDs
+          .send("service_cyp23hq", "template_voahq5k", formData) // Updated service and template ID
           .then(
             function (response) {
               alert("Message sent successfully!");
