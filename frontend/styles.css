@@ -168,12 +168,12 @@ footer a:hover {
 }
 
 .logo-text {
-    font-size: large; /* Adjust the font size as needed */
+    font-size: 2rem; /* Increased font size */
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 500; /* Set the font weight to a value between normal and bold */
-    padding-bottom: 35px; /* Adjust the value as needed to shift the text up */
-    padding-left: 40px; /* Adjust the value as needed to shift the text to the right */
-    color: #34404a; /* Set the text color */
+    font-weight: 500;
+    padding-bottom: 35px;
+    padding-left: 40px;
+    color: #34404a;
 }
 
 .ngre-logo {
